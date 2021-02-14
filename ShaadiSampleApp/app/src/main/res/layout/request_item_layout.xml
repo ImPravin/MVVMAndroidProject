@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#00b1d0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewAvatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/declinedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_marginTop="8dp"
+            android:text="@string/member_declined"
+            android:textColor="#ff595c"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserInfo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/acceptedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_marginTop="8dp"
+            android:text="@string/member_accepted"
+            android:textColor="#0a868f"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserInfo" />
+
+        <ImageView
+            android:id="@+id/declineInviteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUserInfo"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="16dp"
+            android:src="@drawable/decline_invite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/acceptInviteImageView"
+            app:layout_constraintStart_toStartOf="@+id/imageViewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserInfo" />
+
+        <ImageView
+            android:id="@+id/acceptInviteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="16dp"
+            android:layout_toEndOf="@id/declineInviteImageView"
+            android:src="@drawable/accept_invite"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewAvatar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserInfo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

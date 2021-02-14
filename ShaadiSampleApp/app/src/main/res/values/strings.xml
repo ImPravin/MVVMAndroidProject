@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShaadiSampleApp</string>
+    <string name="matches_you_like">Matches you like</string>
+    <string name="invitation_from">Invitation from</string>
+    <string name="accept">Accept</string>
+    <string name="member_declined">Member declined</string>
+    <string name="member_accepted">Member accepted</string>
+    <string name="noInternetConnection">Alert</string>
+    <string name="offlineDataMessage">No active internet connection found. You are viewing offline data.</string>
+    <string name="noRequestsFound">There no new requests found.</string>
+</resources>
