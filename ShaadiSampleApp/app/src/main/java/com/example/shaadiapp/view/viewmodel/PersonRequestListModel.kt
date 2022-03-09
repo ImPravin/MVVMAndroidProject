@@ -1,9 +1,6 @@
 package com.example.shaadiapp.view.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
+import androidx.lifecycle.*
 import com.example.shaadiapp.domain.entities.PersonRequestEntity
 import com.example.shaadiapp.domain.usecases.PersonRequestUseCase
 import com.example.shaadiapp.framework.network.Resource
@@ -27,13 +24,13 @@ class PersonRequestListModel(private val personRequestUseCase: PersonRequestUseC
     }
 
     fun getAllRequestFromDataBase() {
-        GlobalScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             _allRequestsFromDataBase.postValue(personRequestUseCase.getAllRequestFromDataBase())
         }
     }
 
     fun updateRequestStatus(personRequest: PersonRequestEntity) {
-        GlobalScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             personRequestUseCase.updatePersonRequest(personRequest)
         }
     }
